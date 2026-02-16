@@ -39,12 +39,4 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	// PROPERTY()의 메크로 종류
-	// VisibleAnywhere : 읽기만 가능. 편집x 
-	// EditAnywhere : 읽기, 쓰기 모두 가능. 편집o
-	// VisibleInstanceOnly : 읽기 가능. 디폴트 블루프린트에서는 확인할 수 없고 레벨에 인스턴스로 존재하는 디테일패널에서 읽기 가능.
-
-	UPROPERTY(EditAnywhere)
-	float speed = 400.f;
-
 };
