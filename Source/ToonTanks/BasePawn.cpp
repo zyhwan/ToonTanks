@@ -16,6 +16,17 @@ ABasePawn::ABasePawn()
 
 	//루트 컴포넌트를 생성한 캡슐 컴포넌트로 변경.
 	RootComponent = CapsuleComp;
+
+	//static mesh 생성하고 루트에 연결하기.
+	BaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Base Mesh"));
+	BaseMesh->SetupAttachment(CapsuleComp);
+
+	TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Turret Mesh"));
+	BaseMesh->SetupAttachment(BaseMesh);
+
+	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Point"));
+	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
+
 }
 
 // Called when the game starts or when spawned
