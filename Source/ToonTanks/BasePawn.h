@@ -23,6 +23,9 @@ private:
 	UPROPERTY()
 	class UCapsuleComponent* CapsuleComp;
 
+	UPROPERTY()
+	UStaticMeshComponent* BaseMesh;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
