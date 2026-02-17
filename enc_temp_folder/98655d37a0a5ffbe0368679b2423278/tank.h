@@ -16,10 +16,6 @@ class TOONTANKS_API Atank : public ABasePawn
 	
 public:
 	Atank();
-
-	//이동 입력값을 처리해줄 함수.
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class USpringArmComponent* SpringArm;
@@ -27,7 +23,5 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class UCameraComponent* Camera;
 
-	//전방 이동 매핑에 바인드할 함수.
-	void Move(float Value);
 
 };

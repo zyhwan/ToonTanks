@@ -36,6 +36,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	// Called to bind functionality to input
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
 	// PROPERTY()의 메크로 종류
 	// VisibleAnywhere : 읽기만 가능. 편집x 
 	// EditAnywhere : 읽기, 쓰기 모두 가능. 편집o

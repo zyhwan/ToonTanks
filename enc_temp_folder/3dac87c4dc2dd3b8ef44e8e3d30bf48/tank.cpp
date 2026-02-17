@@ -4,7 +4,6 @@
 #include "tank.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
-#include "Components/InputComponent.h"
 
 Atank::Atank()
 {
@@ -16,14 +15,6 @@ Atank::Atank()
 	Camera->SetupAttachment(SpringArm);
 }
 
-void Atank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &Atank::Move);
-}
-
 void Atank::Move(float Value)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Value : %f"), Value);
 }
