@@ -19,6 +19,10 @@ public:
 
 	//이동 입력값을 처리해줄 함수.
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
@@ -38,5 +42,7 @@ private:
 
 	//객체 회전 매핑에 바인드할 함수.
 	void Turn(float Value);
+
+	APlayerController* PlayerControllerRef;
 
 };

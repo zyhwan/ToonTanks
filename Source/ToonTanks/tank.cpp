@@ -26,6 +26,15 @@ void Atank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &Atank::Turn);
 }
 
+void Atank::BeginPlay()
+{
+	Super::BeginPlay();
+
+	//Ä³½ºÆÃ
+	PlayerControllerRef = Cast<APlayerController>(GetController());
+
+}
+
 void Atank::Move(float Value)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Value : %f"), Value);
