@@ -27,6 +27,10 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class UCameraComponent* Camera;
 
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float Speed = 500.f;
+
+
 	//전방 이동 매핑에 바인드할 함수.
 	void Move(float Value);
 

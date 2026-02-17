@@ -51,14 +51,5 @@ public:
 	// private 지정자에서 데이터를 읽거나 쓰고 싶은경우 인자로 meta = (AllowPrivateAccess = "true")를 넣으면 사용가능하다.
 	// Category를 넣을 수 있는데 [Category = "Category Name"] 이런식으로 인자값을 넣어주면 블루프린트 에디터에서 해당 카테고리 이름으로 구분이 생긴다.
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float speed = 400.f;
-
-	UPROPERTY(VisibleDefaultsOnly)
-	int32 VisibleDeafultsOnlyInt = 5;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-	int32 VisibleAnywhereInt = 5;
-
 
 };

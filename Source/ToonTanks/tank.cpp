@@ -5,6 +5,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "Components/InputComponent.h"
+#include "Kismet/GameplayStatics.h"
+
 
 Atank::Atank()
 {
@@ -27,9 +29,12 @@ void Atank::Move(float Value)
 {
 	UE_LOG(LogTemp, Warning, TEXT("Value : %f"), Value);
 
-	FVector DeltaLocation = FVector::ZeroVector; 
+	//델타 타임으로 프레임별 이동 속도 맞춰주기
+	// X(위치 이동값) = Value * Deltatime * Speed
+	// UGameplayStatics::GetWorldDeltaSeconds() : 델타 타임을 반환하는 함수, 인자로 World Context object(this 포인터를 받음)를 받는데 이는 월드 객체에 어떤것이든 인자로 넣으면 해당 월드의 델타 타임을 반환해준다.
 
-	DeltaLocation.X = Value;
+	FVector DeltaLocation = FVector::ZeroVector; 
+	DeltaLocation.X = Value * Speed * UGameplayStatics::GetWorldDeltaSeconds(this);
 
 	AddActorLocalOffset(DeltaLocation);
 
