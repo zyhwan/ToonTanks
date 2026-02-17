@@ -29,8 +29,6 @@ private:
 	USceneComponent* ProjectileSpawnPoint;
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
 	// PROPERTY()의 메크로 종류
 	// VisibleAnywhere : 읽기만 가능. 편집x 
