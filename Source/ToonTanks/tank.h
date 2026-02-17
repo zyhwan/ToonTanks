@@ -28,10 +28,15 @@ private:
 	class UCameraComponent* Camera;
 
 	UPROPERTY(EditAnywhere, Category = "Movement")
-	float Speed = 500.f;
+	float Speed = 600.f;
 
+	UPROPERTY(EditAnywhere, Category = "Movement")
+	float TurnRate = 120.f;
 
 	//전방 이동 매핑에 바인드할 함수.
 	void Move(float Value);
+
+	//객체 회전 매핑에 바인드할 함수.
+	void Turn(float Value);
 
 };
