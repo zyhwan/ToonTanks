@@ -17,7 +17,7 @@ public:
 
 protected:
 	void RotateTurret(FVector LookAtTarget);
-
+	void Fire();
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class UCapsuleComponent* CapsuleComp;
@@ -47,6 +47,8 @@ public:
 	// 읽기 및 쓰기 액세스가 있고, private 섹션에서는 사용할 수 없다.
 	// private 지정자에서 데이터를 읽거나 쓰고 싶은경우 인자로 meta = (AllowPrivateAccess = "true")를 넣으면 사용가능하다.
 	// Category를 넣을 수 있는데 [Category = "Category Name"] 이런식으로 인자값을 넣어주면 블루프린트 에디터에서 해당 카테고리 이름으로 구분이 생긴다.
+
+
 
 
 };

@@ -23,6 +23,8 @@ void Atank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAxis(TEXT("MoveForward"), this, &Atank::Move);
 	PlayerInputComponent->BindAxis(TEXT("Turn"), this, &Atank::Turn);
+
+	PlayerInputComponent->BindAction(TEXT("Fire"), IE_Pressed, this, &Atank::Fire);
 }
 
 void Atank::Tick(float DeltaTime)
