@@ -20,6 +20,8 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	//이동 입력값을 처리해줄 함수.
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
